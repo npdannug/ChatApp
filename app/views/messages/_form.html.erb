@@ -1,0 +1,18 @@
+<%= form_with(model: message, local: true) do |form|  %>
+  <%= form.hidden_field :room_id, value: room.id %>
+  <div class="collapse" id="reply"> 
+            adsfadsfasdf
+
+  </div> 
+  <div class="chat-controls input-group mb-3"> 
+    <%= form.text_field :content, placeholder: "Type your message here...", class: "form-control message-text", id: "txtMessage", required: true, autocomplete: 'off' %>
+    <div class="send-btn">
+      <span class="input-group-text send" id="basic-addon2">
+        <%= form.button :submit, class: 'send' do %>
+  			 <i class='fa fa-paper-plane'></i>
+		    <% end %>
+      </span>
+    </div>
+  </div>
+<% end %>
+

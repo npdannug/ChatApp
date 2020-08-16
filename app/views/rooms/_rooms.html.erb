@@ -1,0 +1,20 @@
+<% active_class = (@room == room) ? 'active' : '' %>
+<div class="card <%= active_class %>">
+  <%= link_to room, class: '' do %>
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-room btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div><%= link_to room.name, room_path(room), class: "room-link" %></div>
+          <div class="members"><small><em><%= room.users.uniq.count %> members</em></small></div>
+        </button>
+      </h2>
+    </div>
+  <% end %>
+  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+    <div class="card-body">
+      <% room.users.uniq.each do |user| %>
+        <%= render  'room_member', user: user %>
+      <% end %>
+    </div>
+  </div>
+</div>

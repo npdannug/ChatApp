@@ -1,0 +1,23 @@
+<div class="messages">
+  <div class="bubble">              
+    <div class="theirs">
+      <div>                 
+        <div class="msg">
+          <%= message.content %> 
+        </div>
+      </div>                
+    </div>
+    <div class="blank">
+      <div class="theirs-msg-options">
+        <span
+          data-toggle="collapse"
+          data-target="#reply"
+          aria-expanded="false"
+          aria-controller="education">
+          <i class="fa fa-reply" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <%= sender_helper message %>
+</div>

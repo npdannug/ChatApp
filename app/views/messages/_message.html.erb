@@ -1,0 +1,5 @@
+<% if message.user == current_user %>
+	<%= render 'messages/mine', message: message %>
+<% else %>
+	<%= render 'messages/theirs', message: message %>
+<% end %>

@@ -1,0 +1,67 @@
+<div id="user-id" data-user-id="<%= current_user.id %>" ></div>
+<div id="room-id" data-room-id="<%= @room.try(:id) %>" ></div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-3 rooms">
+      <div class="form mt-3">
+        <%= render 'form', room: Room.new %>
+      </div>
+      <div class="room-list">
+        <div class="accordion" id="accordionExample">
+          <% @rooms.each do |room| %>        
+            <%= render 'rooms', room: room %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <% if @room.present?  %>
+        <div class="room-name text-center mt-3">
+          <h4><%= @room.name %></h4>
+        </div>
+        <div class="chat-box inline-block">
+          
+            <div id="messages-container" id="messages-container">
+              <% @room.messages.each do |message| %>
+                <%= render 'messages/message', message: message %>
+              <% end %>
+            </div>
+            <div class="chat-form position-absolute">
+              <%= render  'messages/form', message: Message.new, room: @room %>
+            </div>
+          
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-3 friends">
+      <div class="user-account">    
+        <span class="p-3">Hello, <%= current_user.username %></span>
+      </div>
+      <div class="search-form">
+        <div class="form-group has-search">         
+          <input id="search" type="text" class="" placeholder="Search">
+        </div>
+      </div>  
+      <div class="friend-wrapper pt-3">
+        <%= render 'friend' %>
+        <div class="friend-container">  
+            <div class="friend-thumb">
+              <figure>
+                <img src="https://c1.staticflickr.com/1/185/440890151_54c5b920b0_b.jpg" alt="Profile Photo">
+                 <figcaption class="offline"></figcaption>
+              </figure>
+            </div>
+            <div class="friend-content">
+                <div class="friend-name"><em>username</em></div>
+                <div class="last-msg">Anim pariatur cliche reprehenderit, enim eiusmod high ... <em>- 20 minutes ago</em> </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

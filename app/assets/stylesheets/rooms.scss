@@ -1,0 +1,427 @@
+
+@import "font-awesome";
+
+.required { color:red;  }
+
+html {
+    height: 100vh;
+    }
+body {
+    min-height: 500px;
+    margin: 0;
+    min-width:600px;       /* Suppose you want minimum width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width:1000px;     
+    font-family: 'Lato', sans-serif !important;  
+    background-color: #1a1729;
+    
+    overflow: hidden; 
+
+    }
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3d3e61; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1F618D; 
+}
+
+
+.form{
+	border-radius: 0 0 10px 10px ;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+
+
+.user-account {
+	font-size: 15px;
+	color: #F5F5F5;
+	border-radius: 0 0 5px 5px;
+	margin: 0 20px 20px 0;
+	padding: 5px !important;
+	background-color: #005b96;
+}
+
+.user-account:hover {
+	border-color: #963f11;
+}
+
+.room-name {
+	color: #fff;
+}
+
+.btn-room {
+	color: #F5F5F5
+}
+
+.btn-room:hover {
+	color: #F5F5F5;
+}
+
+.send-btn{
+ 	
+ }
+
+.rooms {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.room-list {	
+	flex-grow: 1;
+	margin-bottom: 15px;
+	max-height: 90vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.room-link {
+	color: #fff ;
+}
+
+.room-link:hover {
+	color: #fff ;
+}
+
+.card{
+	background-color: #1a1729 !important;
+	border: 0px;
+	color: #bbbbbb;
+	border-left: #1a1729 5px solid;
+	border-radius: 0px;
+}
+
+
+.card-header {
+	border-left: #1a1729 5px solid;
+}
+
+.card:hover {
+  border-color: #367896
+}
+
+
+
+.active{
+	border-color: #367896	
+}
+
+.col-6 {
+	
+	background-color: #221f3b; 
+	color: #bdc3c7;
+
+
+}
+
+.col-3 {
+	background-color:  #1a1729; 
+
+}
+
+.col-3 .friends {
+	
+}
+
+.chat-box {	
+	width: 100%;
+	height: 95vh;
+
+}
+
+.friends {
+	background-color: #221f3b;
+}
+
+.btn-link {
+	color: #F5F5F5;
+ }
+
+#messages-container {
+
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 85%;
+	padding-right: 10px; 
+}
+
+.bubble {
+	color: #F5F5F5;
+	display: flex;
+	margin: 10px 5px 0px 5px;
+}
+
+.blank {
+	flex-grow: 1; 
+	position: relative;
+	
+}
+
+.mine {
+	max-width: 60%;
+	padding-top: 10px;
+	padding-left: 5px;
+	word-break: break-all;
+}
+
+.theirs {
+	max-width: 60%;
+	word-break: break-all;
+}
+
+.theirs-msg-options { 
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: 5px;
+    color: #c0c0c0;
+}
+
+
+
+.theirs-msg-options  .fa-reply:hover {
+	color: #fff !important;
+}
+
+
+.mine-msg-options { 
+	position: absolute;
+    top: 15px;
+    right: 0px;
+    color: #c0c0c0;
+}
+
+
+.mine .msg{
+	color: #F5F5F5;
+	background-color: #4b86b4;
+	padding: 10px;
+	border-radius: .25rem;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.theirs .msg{
+	color: #F5F5F5;
+	background-color: #005b96 ;
+	padding: 10px;
+	border-radius: .25rem;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.mine .sender {
+	float: right;
+	margin-top: 3px;
+}
+
+.sender {
+	color: #bdc3c7
+}
+
+.chat-form{
+	border-radius: 0 0 10px 10px ;
+	padding: 15px;
+	margin-bottom: 15px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.chat-controls {
+  float: right;
+  width: 90%;
+  margin-right: 5%;
+}
+
+.message-text {
+	border-radius: .25rem !important;
+
+}
+
+
+.reply {
+
+}
+
+.input-group-text {
+	padding: 0px;
+}
+
+.send {
+	background: transparent;
+	border: none;
+	font-size: 25px;
+	color: #4b86b4
+}
+
+.send {
+	color: #4b86b4
+}
+
+.send button { outline: none  }
+
+
+.fa:hover {
+	color: #005b96
+}
+
+.members { color: #bdc3c7  }
+
+.friend-wrapper {
+	max-height: 90vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.friend-bubble {
+
+
+}
+
+.profile-pic {
+width: 20%
+}
+
+.friend-info {
+width: 80%
+}
+
+.friend-name {
+	color: #fff;
+	font-size: 14px;
+}
+
+.member-name {
+	color: #fff;
+	font-size: 14px;
+}
+
+.last-msg {
+	color: #bdc3c7;
+	font-size: 12px;
+}
+
+.friend-container {
+    margin: 0px 20px 20px 0;  
+    overflow: auto;
+    border-bottom: 1px #6497b1 solid 
+}
+.friend-thumb {
+    float: left;
+    margin-right: 10px;
+}
+.friend-thumb img {
+    display: block
+}
+
+.friend-thumb figure img {
+	height: 60px;
+	width: 60px;
+}
+
+figure {
+    display: inline-block; /* Here !!! */
+    position: relative;
+    margin: 0;
+}
+
+figcaption{
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  color: white;
+  width: 0;
+  height: 0;
+  border-right: 30px solid transparent;
+}
+
+.online {
+  border-bottom: 30px solid #32CD32;
+}
+.offline {
+  border-bottom: 30px solid #757575;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.search-form {
+ padding-right: 1rem;
+}
+
+#search {
+	background-color: transparent;
+	border-color: transparent;
+	border-bottom: 1px #c10000 solid;
+	width: 100%;
+	color: #F5F5F5;
+}
+	
+
+/*Room Member************************/
+.member-container {
+    margin: 0px 10px 10px 30px;  
+    overflow: auto;
+    border-bottom: 1px #6497b1 solid 
+}
+.member-thumb {
+    float: left;
+    margin-right: 5px;
+}
+.member-thumb img {
+    display: block
+}
+
+.member-online {
+  border-bottom: 15px solid #7CB342;
+}
+
+.status {
+  color: #7CB342;
+  margin-top: -4px;
+}
+
+.chat-status {
+	font-size: 10px;
+}
+
+.chat-online {
+ color: #32CD32
+}
+
+.chat-offline {
+  color: #757575
+}
+
+
+/*Room Member************************/

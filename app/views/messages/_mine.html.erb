@@ -1,0 +1,24 @@
+<div class="messages">
+  <div class="bubble">
+    <div class="blank">
+      <div class="mine-msg-options">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="mine">
+      <div>                 
+        <div class="msg">
+          <%= message.content %> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sender text-right">
+    <small>
+      <em>        
+        <%= message.user.username %>,
+        <%= time_ago_in_words(message.created_at) %>        
+      </em>
+    </small>
+  </div>
+</div>
